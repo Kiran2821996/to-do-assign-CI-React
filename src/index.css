@@ -8,7 +8,8 @@ body {
  
 }
 
-.login_form{
+
+.main_container{
   background-color: black;
   color: white;
   width: 100%;
@@ -17,4 +18,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
+/* .header_todo{
+  position: absolute;
+  top: 0;
+} */

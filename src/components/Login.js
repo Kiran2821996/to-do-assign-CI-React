@@ -2,17 +2,23 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react'
-import details from './details.json'
+import Details from "./Details"
+import {useNavigate,useLocation} from "react-router-dom"
 
-function Login({setLogin}) {
+function Login() {
     const [formData,setFormData]=useState({
         email:"",
         password:""
     })
+    let location = useLocation()
+    let navigate = useNavigate()
     const handleSubmit=(e)=>{
         e.preventDefault()
-        if(details.email===formData.email && details.password===formData.password){
-            setLogin(true)
+        if(Details.email===formData.email && Details.password===formData.password){
+            navigate('/todo',true)
+        }else{
+          navigate('/invalidcrd',true)
+          
         }
         
     }
